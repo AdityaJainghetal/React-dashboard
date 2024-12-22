@@ -1,0 +1,38 @@
+
+
+#headerData
+{
+  text-align:  right;
+  padding-right: 50px;
+  cursor: pointer;
+}
+
+
+#myFooter
+{
+    background-color: lightgray;
+    height: 100px;
+    padding: 30px;
+    margin-top: 50px;
+}
+
+#admindashbaord{
+  padding: 20px;
+  text-align: right;
+  background-color: rgb(25, 39, 62);
+  color: whitesmoke;
+}
+
+#adminDashbaord{
+  display: flex;
+  justify-content: space-between;
+
+}
+
+#adminMenu{
+  width: 20%;
+}
+
+#adminData{
+  width: 80%;
+}
