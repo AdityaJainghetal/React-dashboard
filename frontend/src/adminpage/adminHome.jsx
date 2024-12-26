@@ -1,8 +1,5 @@
  import { useEffect } from "react";
  import { useNavigate } from "react-router-dom";
-//  import Dashboard from '../adminpage/Dashbaord';
-//  import Navbar from './Navbar'; 
-// import Sidebar from "./Sidebar";
  
  
  const AdminHome=()=>{

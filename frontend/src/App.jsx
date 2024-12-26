@@ -17,11 +17,11 @@ const App=()=>{
     <>
         <BrowserRouter>
           <Routes>
+          
             <Route path="/" element={<Layout/>}>
-              <Route index element={<Home/>} />
-              <Route path="home" element={<Home/>}/>
-              <Route path="registration" element={<Registration/>}/>
-             
+               <Route path="home" element={<Home/>}/>
+               <Route path="Registration" element={<Registration/>}/> 
+               
             </Route>
 
 
@@ -29,14 +29,18 @@ const App=()=>{
             
               
               <Route  path="dashboard" element={<Dashboard/>}>
-              <Route index element={<AdminHome/>}/>
+              {/* <Route path="home" element={<Home/>}/> */}
+              {/* <Route index element={<AdminHome/>}/> */}
              
               <Route path="adminhome" element={<AdminHome/>}/> 
+              <Route path="home" element={<Home/>}/>
               <Route path="display" element={<Display/>}/>
               <Route path="insert" element={<Insert/>}/>
               <Route path="update" element={<Update/>}/>
               <Route path="delete" element={<Delete/>}/>
-              <Route path="search" element={<Search/>}></Route>
+              <Route path="search" element={<Search/>}/>
+              <Route path="Registration" element={<Registration/>}/>
+              {/* <Route path="Registration" element={<Registration/>}/> */}
 
                {/* <Route path="adminabout" element={<AdminAbout/>}/> */}
               </Route>

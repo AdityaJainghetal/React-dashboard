@@ -11,19 +11,13 @@ import { useNavigate } from "react-router-dom";
 
 const Header=()=>{
 
-    const [show, setShow] = useState(false);
 
-    const handleClose = () => setShow(false);
-    const handleShow = () => setShow(true);
-   const [input, setInput] = useState({});
+
+
 
    const navigate = useNavigate()
 
-    const handleInput=(e)=>{
-       let name=e.target.name; 
-       let value=e.target.value;
-       setInput(values=>({...values, [name]:value}));
-    }
+   
 
     const handleSubmit=(e)=>{
         e.preventDefault();
@@ -47,7 +41,7 @@ const Header=()=>{
 
     return(
         <>
-        <div id="headerData">
+        {/* <div id="headerData">
         <FaUser onClick={handleShow} />   
         </div>
 
@@ -79,7 +73,7 @@ const Header=()=>{
 
 
         </Modal.Body>
-      </Modal>
+      </Modal> */}
                
         </>
     )

@@ -37,7 +37,7 @@ const Edit=()=>{
     return(
         <>
        <div  style={{display:"flex", justifyContent:"center",alignItems:"center" }}>
-       {/* <h1>Update your Record</h1> */}
+       <h1>Update your Record</h1> 
        <div className='border-2 font-serif pt-5 size-auto text-xl font-semibold hover:bg-neutral-400 mt-12 w-3/6 flex-col bg-slate-400 caret-gray-700 flex justify-center text-center'>
         Edit name: <input type="text" name="name" value={mydata.name} onChange={handleInput} className="bg-slate-200  font-serif rounded-md text-center"/>
         <br />
@@ -57,3 +57,4 @@ const Edit=()=>{
 
 
 export default Edit;
+

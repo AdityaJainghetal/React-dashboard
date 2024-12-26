@@ -17,6 +17,7 @@ const Dashboard=()=>{
         const Uemail = window.localStorage.getItem("userEmail");
 
         if(!Uname){
+            // console.log("sjdchskjdh")
             navigate("/home")
         }
 
@@ -37,7 +38,7 @@ const Dashboard=()=>{
         <div id="admindashbaord">
         Welcome : {useName} Email: {useEmail};
 
-        <Button variant="primary" onClick={logout} size="sm" style={{marginLeft:"20px"}}>
+        <Button variant="primary" onClick={logout} size="sm" style={{marginLeft:"20px", width:"80px"}}>
           Logout
         </Button>
         </div>

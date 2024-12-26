@@ -1,18 +1,45 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { FaHome } from "react-icons/fa";
 import { FaDisplay } from "react-icons/fa6";
 import { MdOutlineBrowserUpdated } from "react-icons/md";
 import { FaSearch } from "react-icons/fa";
 import { RiLogoutBoxFill } from "react-icons/ri";
 import { FaTrashAlt } from "react-icons/fa"; 
-import { Link, Outlet } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { MdEditDocument } from "react-icons/md";
-// import Navbar from './Navbar';
-// import Dashboard from './Dashboard';
-
-
+// import { useState } from 'react';
+import { useEffect } from 'react';
 
 const Sidebar = ({ sidebarToggle }) => {
+//  const navigate =useNavigate()
+ 
+  // ....
+ 
+    const [useName, setUserName] = useState("");
+    const [useEmail, setUseEmail] = useState("")
+    const navigate = useNavigate()
+
+    useEffect(()=>{
+        const Uname= window.localStorage.getItem("UserName");
+        const Uemail = window.localStorage.getItem("userEmail");
+
+        if(!Uname){
+            navigate("/home")
+        }
+
+
+        setUserName(Uname);
+        setUseEmail(Uemail)
+    },[])
+
+    const logout=()=>{
+        window.localStorage.clear()
+        navigate("/home")
+    }
+
+// ...
+ 
+ 
   return (
     <>
     
@@ -71,7 +98,7 @@ const Sidebar = ({ sidebarToggle }) => {
         <li className="mb-2 rounded hover:shadow hover:bg-blue-500 py-4 px-2 flex items-center">
           <MdEditDocument  className="w-6 h-6 mr-2" />
          <Link to="Update">
-         <a href="#">
+         <a href="">
           Update
           </a>
           </Link>
@@ -79,9 +106,11 @@ const Sidebar = ({ sidebarToggle }) => {
 
 
 
+
+
         <li className="mb-2 rounded hover:shadow hover:bg-blue-500 py-3 px-2 flex items-center">
           <RiLogoutBoxFill className="w-6 h-6 mr-2" />
-         <Link to="Login">
+         <Link to="Login" onClick={logout}>
          <a href="#">
           Logout
           </a>

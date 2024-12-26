@@ -19,10 +19,6 @@ const Display = () => {
   },[])
 
 
-
-
-
-
   const ans= mydata.map((key)=>{
     return(
       <>
@@ -31,6 +27,7 @@ const Display = () => {
         <td>{key.price}</td>
         <td>{key.author_name}</td>
         <td>{key.publish_year}</td>
+        
       </tr>
       
       </>

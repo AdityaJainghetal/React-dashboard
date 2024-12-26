@@ -1,0 +1,83 @@
+{
+  "books": [
+    {
+      "id": "1",
+      "name": "HTML Complete Refrence",
+      "price": 500,
+      "author_name": "John Doe",
+      "publish_year": 2022
+    },
+    {
+      "id": "3e18",
+      "name": "REACT .js",
+      "price": "4500",
+      "author_name": "Aditya jain",
+      "publish_year": "2021"
+    },
+    {
+      "id": "c6ce",
+      "name": "JAVASCIPT",
+      "price": "4500",
+      "author_name": "Rajish mishra",
+      "publish_year": "2022"
+    },
+    {
+      "id": "e229",
+      "name": "JAVASCIPT",
+      "price": "4500",
+      "author_name": "Rajish mishra",
+      "publish_year": "2022"
+    },
+    {
+      "id": "ba9d",
+      "name": "REACT .js",
+      "price": "4500",
+      "author_name": "Aditya jain",
+      "publish_year": "2021"
+    },
+    {
+      "id": "ea54",
+      "name": "HTML",
+      "price": "6700",
+      "author_name": "Aashra maam",
+      "publish_year": "2023"
+    },
+    {
+      "id": "8786",
+      "name": "REACT .js",
+      "price": "4500",
+      "author_name": "Rajish mishra",
+      "publish_year": "2021"
+    },
+    {
+      "id": "38b2",
+      "name": "REACT .js",
+      "price": "4500",
+      "author_name": "Raju",
+      "publish_year": "2021"
+    },
+    {
+      "id": "5b2d",
+      "name": "Aditya Jain",
+      "price": "4500",
+      "author_name": "Rajish mishra",
+      "publish_year": "2021"
+    },
+    {
+      "id": "1f86",
+      "name": "Aditya Jain",
+      "price": "4500",
+      "author_name": "Rajish mishra",
+      "publish_year": "2021"
+    }
+  ],
+  "user": [
+    {
+      "id": "1",
+      "name": "HTML Complete Refrence",
+      "email": 500,
+      "password": "John Doe",
+      "repassword": 2022
+    }
+  ]
+}
