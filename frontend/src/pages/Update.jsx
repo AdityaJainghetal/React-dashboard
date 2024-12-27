@@ -4,7 +4,7 @@ import { RiEdit2Fill } from "react-icons/ri";
 import { useNavigate } from 'react-router-dom';
 
 const Update = () => {
-  const [myData, setMyData] = useState([]);
+  const [mydata, setMyData] = useState([]);
   const navigate = useNavigate();
 
   const loadData =async () => {
@@ -12,7 +12,7 @@ const Update = () => {
     axios.get(api)
       .then((res) => {
         setMyData(res.data);
-        console.log(myData);
+        console.log(mydata);
         
       })
       .catch((error) => {
@@ -28,7 +28,7 @@ const Update = () => {
     navigate(`/dashboard/edit/${id}`);
   };
 
-  const ans = myData.map((key) => (
+  const ans = mydata.map((key) => (
     <tr key={key.id} className='border-2 font-serif hover:bg-neutral-400 bg-slate-400 font-medium size-9'>
       <td>{key.name}</td>
       <td>{key.price}</td>
@@ -64,4 +64,3 @@ const Update = () => {
 };
 
 export default Update;
-

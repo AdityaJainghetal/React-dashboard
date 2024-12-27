@@ -3,11 +3,13 @@ import axios from "axios";
 import { message } from "antd";
 import { useParams } from "react-router-dom";
 
+
 const Edit=()=>{
     const [mydata, setMydata] =useState({});
     const {id} = useParams();
+
     const loadData=()=>{
-        let api = `http://localhost:8000/employer/editdisplay/?=${id}`;
+        let api = `http://localhost:8000/employer/editdisplay/?id=${id}`;
         axios.get(api).then((res)=>{
             setMydata(res.data);
             console.log(res.data);
@@ -17,6 +19,10 @@ const Edit=()=>{
     useEffect(()=>{
         loadData()
     },[]);
+
+    
+    
+
 
     const handleInput=(e)=>{
         let name=e.target.name;
@@ -48,7 +54,7 @@ const Edit=()=>{
         Edit Publish Year : <input type="text" name="publish_year" value={mydata.publish_year} onChange={handleInput} className="bg-slate-200 rounded-md text-center"/>
        <br />
 
-       <button onClick={handleSubmit} className="bg-red-950 text-slate-50 w-60 ml-72">Update save </button>
+       <button onClick={handleSubmit}  className="bg-red-950 text-slate-50 w-60 ml-72" >Update save </button>
        </div>
         </div>
         </>
@@ -57,4 +63,3 @@ const Edit=()=>{
 
 
 export default Edit;
-
