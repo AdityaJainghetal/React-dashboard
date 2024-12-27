@@ -8,7 +8,7 @@ const Display = () => {
   const [mydata , setMydata] = useState([]);
 
   const loaddata=()=>{
-    let api= "http://localhost:3000/books";
+    let api= "http://localhost:8000/employer/datadisplay";
     axios.get(api).then((res)=>{
       setMydata(res.data);
     })

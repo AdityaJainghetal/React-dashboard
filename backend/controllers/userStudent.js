@@ -1,16 +1,17 @@
 const StuModel =require("../models/studentModel");
 
 const dataSave = async(req, res)=>{
-    const {name,price, author_name,year} = req.body;
-
-    ({
+    const {name,price, author_name,publish_year} = req.body;
+    console.log(req.body);
+    
+    const book = StuModel.create({
         name:name,
         price:price,
         author_name:author_name,
-        year:year
+        publish_year:publish_year
     })
 
-    res.send(data)
+    res.send(book)
 
 }
 
@@ -22,22 +23,23 @@ const dataSearch =async(req, res)=>{
 }
 
 
-const deleteDataDisplay= async(req,res)=>{
-    const Data = await StuModel.find();
+const deleteDataDisplay=async(req, res)=>{
+    const Data= await  StuModel.find();
     res.send(Data);
 }
 
-const recordDelete =async (req,res)=>{
-    const {myid} = req.body;
-    const myRes = await StuModel.findByIdAndDelete(myid)
-    res.send(myRes);
 
+
+const recordDelete=async(req, res)=>{
+ const {myid} = req.body;
+ const myRes=await    StuModel.findByIdAndDelete(myid);
+ res.send(myRes);
 }
 
 
 const dataDisplay= async(req,res)=>{
     const myData = await StuModel.find();
-    res.find(myData)
+    res.send(myData)
 }
 
 module.exports={

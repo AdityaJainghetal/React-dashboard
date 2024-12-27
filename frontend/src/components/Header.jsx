@@ -1,10 +1,3 @@
-import { FaUser } from "react-icons/fa";
-
-import { useState } from 'react';
-import Button from 'react-bootstrap/Button';
-import Modal from 'react-bootstrap/Modal';
-
-import Form from 'react-bootstrap/Form';
 import axios from "axios";
 import {message} from "antd";
 import { useNavigate } from "react-router-dom";
@@ -19,25 +12,25 @@ const Header=()=>{
 
    
 
-    const handleSubmit=(e)=>{
-        e.preventDefault();
-        let api="http://localhost:8000/users/usercheck";
-        axios.post(api, input).then((res)=>{
-                    console.log(res.data.Data[0].name)
-                    console.log(res.data.Data[0].email)
+    // const handleSubmit=(e)=>{
+    //     e.preventDefault();
+    //     let api="http://localhost:8000/users/usercheck";
+    //     axios.post(api, input).then((res)=>{
+    //                 console.log(res.data.Data[0].name)
+    //                 console.log(res.data.Data[0].email)
 
-                    window.localStorage.setItem("UserName", res.data.Data[0].name);
-                    window.localStorage.setItem("userEmail", res.data.Data[0].email);
+    //                 window.localStorage.setItem("UserName", res.data.Data[0].name);
+    //                 window.localStorage.setItem("userEmail", res.data.Data[0].email);
 
-                        message.success(res.data.msg);
+    //                     message.success(res.data.msg);
 
-                        navigate("/dashboard")
+    //                     navigate("/dashboard")
 
-                }).catch((err)=>{
-                    message.error(err.response.data.msg);
-                })
+    //             }).catch((err)=>{
+    //                 message.error(err.response.data.msg);
+    //             })
         
-    }
+    // }
 
     return(
         <>

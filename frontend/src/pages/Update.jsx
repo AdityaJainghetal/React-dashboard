@@ -99,11 +99,13 @@ const Update = () => {
   const [myData, setMyData] = useState([]);
   const navigate = useNavigate();
 
-  const loadData = () => {
-    const api = "http://localhost:3000/books";
+  const loadData =async () => {
+    const api = "http://localhost:8000/student/datadisplay";
     axios.get(api)
       .then((res) => {
         setMyData(res.data);
+        console.log(myData);
+        
       })
       .catch((error) => {
         console.error("Error fetching data:", error);

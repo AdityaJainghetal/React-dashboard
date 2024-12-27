@@ -1,7 +1,6 @@
 import React, { useEffect } from 'react'
 import { useState } from 'react'
 import axios from 'axios'
-// import { useNavigate } from 'react-router-dom'
 import {message} from 'antd';
 import { MdDelete } from "react-icons/md";
 
@@ -11,9 +10,10 @@ const Delete = () => {
 
 
   const loaddata=()=>{
-    let api= "http://localhost:3000/books";
+    let api= "http://localhost:8000/employer/datadisplay";
     axios.get(api).then((res)=>{
       setMydata(res.data);
+      // console.log(res.data);
     })
   }
 
@@ -22,8 +22,10 @@ const Delete = () => {
   },[])
 
   const myDel=(id)=>{
-    let api= `http://localhost:3000/books/${id}`;
-    axios.delete(api).then((res)=>{
+    let api= "http://localhost:8000/employer/recorddelete";
+    axios.post(api,{myid:id}).then((res)=>{
+      // alert("Data deleted")
+      
       message.error("Record successfully delete")
       loaddata()
     })
@@ -41,7 +43,7 @@ const Delete = () => {
         <td>{key.author_name}</td>
         <td>{key.publish_year}</td>
         <td>
-          <a href="#" onClick={()=>{myDel(key.id)}}>
+          <a href="" onClick={()=>{myDel(key._id)}}>
         <MdDelete/>
         </a>
         </td>

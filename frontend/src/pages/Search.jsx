@@ -7,7 +7,7 @@ const Search=()=>{
     const [year, setYear]=useState("");
     const [mydata, setMydata]=useState([]);
     const handleSubmit=()=>{
-        let api=`http://localhost:3000/books/?publish_year=${year}`;
+        let api="http://localhost:8000/employer/datadisplay";
         // let api= "http://localhost:8080/students/datadisplay"
         axios.get(api).then((res)=>{
             setMydata(res.data);

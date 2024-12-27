@@ -5,7 +5,7 @@ stuSchema = new mongoose.Schema({
         name:String,
         price:Number,
         author_name:String,
-        year:Number
+        publish_year:Number
 })
 
 module.exports = mongoose.model("student", stuSchema)

@@ -22,7 +22,7 @@ const Insert = () => {
   
 
   const handleSubmit=(e)=>{
-    let api="http://localhost:3000/books";
+    let api="http://localhost:8000/employer/datasave";
     axios.post(api,input).then((res)=>{
 
       if (!input.name || !input.price || !input.author_name || !input.publish_year) {
@@ -31,7 +31,7 @@ const Insert = () => {
       }
   
         message.success("Book Inserted Successfully")
-        navigate("/Display")
+        navigate("/dashboard/display")
       });
   }
   

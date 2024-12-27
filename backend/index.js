@@ -4,7 +4,7 @@ const bodyparser = require('body-parser')
 const cors= require("cors");
 const mongoose= require("mongoose");
 const UserRoute= require("./routes/userRoute");
-// const studentModel = require("./models/studentModel");
+const studentModel = require("./models/studentModel");
 // const bodyparser = require('body-parser');
 const stuRoute =require("./routes/studentRoute")
 
@@ -21,7 +21,7 @@ app.use(bodyparser.json())
 app.use(cors());
 
 app.use("/users", UserRoute);
-app.use("/student", stuRoute)
+app.use("/employer", stuRoute)
 
 
 app.listen(Port, ()=>{ 
