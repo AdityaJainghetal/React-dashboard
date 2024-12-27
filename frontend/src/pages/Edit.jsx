@@ -7,7 +7,7 @@ const Edit=()=>{
     const [mydata, setMydata] =useState({});
     const {id} = useParams();
     const loadData=()=>{
-        let api = `http://localhost:3000/books/${id}`
+        let api = `http://localhost:8000/employer/editdisplay/?=${id}`;
         axios.get(api).then((res)=>{
             setMydata(res.data);
             console.log(res.data);
@@ -22,12 +22,12 @@ const Edit=()=>{
         let name=e.target.name;
         let value =e.target.value;
         setMydata(values=>({...values,[name]:value}));
-        console.log(mydata);
+        // console.log(mydata);
     }
 
     const handleSubmit=()=>{
-        let api = `http://localhost:3000/books/${id}`;
-        axios.put(api,mydata).then((res)=>{
+        let api = "http://localhost:8000/employer/editsave";
+        axios.post(api,{id:id,...mydata}).then((res)=>{
             message.success("Data successfully updated")
         })
     }
