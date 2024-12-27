@@ -115,7 +115,7 @@ const Update = () => {
   }, []);
 
   const myEdit = (id) => {
-    navigate(`/edit/${id}`);
+    navigate(`/dashboard/edit/${id}`);
   };
 
   const ans = myData.map((key) => (

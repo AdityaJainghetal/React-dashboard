@@ -9,6 +9,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { MdEditDocument } from "react-icons/md";
 // import { useState } from 'react';
 import { useEffect } from 'react';
+import Display from './../pages/Display';
 
 const Sidebar = ({ sidebarToggle }) => {
 //  const navigate =useNavigate()
@@ -24,7 +25,7 @@ const Sidebar = ({ sidebarToggle }) => {
         const Uemail = window.localStorage.getItem("userEmail");
 
         if(!Uname){
-            navigate("/home")
+            navigate("/")
         }
 
 
@@ -33,9 +34,9 @@ const Sidebar = ({ sidebarToggle }) => {
     },[])
 
     const logout=()=>{
-        window.localStorage.clear()
-        navigate("/home")
-    }
+      window.localStorage.clear()
+      navigate("/")
+  }
 
 // ...
  
@@ -53,69 +54,48 @@ const Sidebar = ({ sidebarToggle }) => {
       <hr className="border-gray-600" />
       <ul className="mt-2 text-white font-bold text-2xl gap-y-20 group-autofill" >
        
-        <li className="mb-2 rounded hover:shadow hover:bg-blue-500 py-4 px-2 flex items-center ">
-          <FaHome className="w-6 h-6 mr-2" />
-          <Link to="home">
-          <a href="#">
-         Home </a>
+        
+          <Link to="home" className="mb-2 rounded hover:shadow hover:bg-blue-500 py-4 px-2 flex items-center ">
+          <FaHome className="w-6 h-6 mr-2" />Home 
          </Link>
-        </li>
-        <li className="mb-2 rounded hover:shadow hover:bg-blue-500 py-4 px-2 flex items-center">
-          <FaDisplay className="w-6 h-6 mr-2" />
-          <Link to="display">
-          <a href="#">
-          Display</a>
-          </Link>
+      
         
-        </li>
-        <li className="mb-2 rounded hover:shadow hover:bg-blue-500 py-4 px-2 flex items-center">
-          <MdOutlineBrowserUpdated className="w-6 h-6 mr-2" />
-          
-          <Link to="insert">
-          <a href="#">
-          Addpassanger</a>
-          </Link>
+
+          <Link to="display" className="mb-2 rounded hover:shadow hover:bg-blue-500 py-4 px-2 flex items-center ">
+          <FaDisplay className="w-6 h-6 mr-2" />Display
+         </Link>
         
-        </li>
-        <li className="mb-2 rounded hover:shadow hover:bg-blue-500 py-4 px-2 flex items-center">
-          <FaTrashAlt className="w-6 h-6 mr-2" />
         
-          <Link to="delete">
-          <a href="#">
-          Deleted </a>
-          </Link>
+      
+        <Link to="insert" className="mb-2 rounded hover:shadow hover:bg-blue-500 py-4 px-2 flex items-center ">
+          <MdOutlineBrowserUpdated className="w-6 h-6 mr-2" />Addpassanger
+         </Link>
+
        
-        </li>
-        <li className="mb-2 rounded hover:shadow hover:bg-blue-500 py-4 px-2 flex items-center">
-          <FaSearch className="w-6 h-6 mr-2" />
-         <Link to="search">
-         <a href="#">
-          Search
-          </a>
-          </Link>
-        </li>
+       
+       
+        <Link to="delete" className="mb-2 rounded hover:shadow hover:bg-blue-500 py-4 px-2 flex items-center ">
+          <FaTrashAlt className="w-6 h-6 mr-2" />Deleted
+         </Link>
 
-        <li className="mb-2 rounded hover:shadow hover:bg-blue-500 py-4 px-2 flex items-center">
-          <MdEditDocument  className="w-6 h-6 mr-2" />
-         <Link to="Update">
-         <a href="">
-          Update
-          </a>
-          </Link>
-        </li>
+        
 
+        <Link to="search" className="mb-2 rounded hover:shadow hover:bg-blue-500 py-4 px-2 flex items-center ">
+          <FaSearch className="w-6 h-6 mr-2" />Search
+         </Link>
 
+        
+
+        
+        <Link to="Update" className="mb-2 rounded hover:shadow hover:bg-blue-500 py-4 px-2 flex items-center ">
+          <MdEditDocument className="w-6 h-6 mr-2" />Update
+         </Link>
 
 
-
-        <li className="mb-2 rounded hover:shadow hover:bg-blue-500 py-3 px-2 flex items-center">
-          <RiLogoutBoxFill className="w-6 h-6 mr-2" />
-         <Link to="Login" onClick={logout}>
-         <a href="#">
-          Logout
-          </a>
-          </Link>
-        </li>
+          
+        <button onClick={logout}style={{width:"100%"}}  className="mb-2 rounded hover:shadow hover:bg-blue-500 py-4 px-2 flex items-center ">
+          <RiLogoutBoxFill className="w-6 h-6 mr-2" />Logout
+         </button>
       </ul>
       <div>
       

@@ -1,7 +1,7 @@
 const StuModel =require("../models/studentModel");
 
 const dataSave = async(req, res)=>{
-    const {rollno, name, city, fees} = req.body;
+    const {name,price, author_name,year} = req.body;
 
     ({
         name:name,

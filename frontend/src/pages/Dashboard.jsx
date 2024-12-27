@@ -28,7 +28,7 @@ const Dashboard=()=>{
 
     const logout=()=>{
         window.localStorage.clear()
-        navigate("/home")
+        navigate("/")
     }
 
 
@@ -45,23 +45,9 @@ const Dashboard=()=>{
         <hr />
         <Sidebar/>
 
-        {/* <h1>Welcome to admin Dashbaord</h1> */}
-
-
-        {/* <div id="adminDashbaord">
-            <div id="adminMenu">
-                <Link to="adminhome">Home page</Link>
-                <br/>
-                <br/>
-                <Link to="adminabout">About page</Link>
-
-            </div>
-
-            <div id="adminData"> */}
+       
                 <Outlet/>
 
-            {/* </div> */}
-        {/* </div> */}
         
         
         </>

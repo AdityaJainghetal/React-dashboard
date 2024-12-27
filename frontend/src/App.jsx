@@ -10,6 +10,8 @@ import Delete from "./pages/Delele";
 import Insert from "./pages/Insert";
 import Search from "./pages/Search";
 // import AdminAbout from "./adminpage/adminAbout";
+import Edit from './pages/Edit';
+import LoginPage from "./pages/LoginPage";
 
 
 const App=()=>{
@@ -19,7 +21,7 @@ const App=()=>{
           <Routes>
           
             <Route path="/" element={<Layout/>}>
-               <Route path="home" element={<Home/>}/>
+            <Route index element={<LoginPage/>}/>
                <Route path="Registration" element={<Registration/>}/> 
                
             </Route>
@@ -29,16 +31,16 @@ const App=()=>{
             
               
               <Route  path="dashboard" element={<Dashboard/>}>
-              {/* <Route path="home" element={<Home/>}/> */}
-              {/* <Route index element={<AdminHome/>}/> */}
              
               <Route path="adminhome" element={<AdminHome/>}/> 
+              <Route index element={<Home/>}/>
               <Route path="home" element={<Home/>}/>
               <Route path="display" element={<Display/>}/>
               <Route path="insert" element={<Insert/>}/>
               <Route path="update" element={<Update/>}/>
               <Route path="delete" element={<Delete/>}/>
               <Route path="search" element={<Search/>}/>
+              <Route path="edit/:id" element={<Edit/>}/>
               <Route path="Registration" element={<Registration/>}/>
               {/* <Route path="Registration" element={<Registration/>}/> */}
 
