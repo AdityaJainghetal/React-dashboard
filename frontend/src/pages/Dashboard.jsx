@@ -36,8 +36,9 @@ const Dashboard=()=>{
     return(
         <>
         <div id="admindashbaord">
+            
         Welcome : {useName} Email: {useEmail};
-
+            
         <Button variant="primary" onClick={logout} size="sm" style={{marginLeft:"20px", width:"80px"}}>
           Logout
         </Button>

@@ -55,8 +55,9 @@ const Delete = () => {
 
   return(
     <>
-        <div  style={{paddingLeft:"300px"}}>
-    <h1 className='font-serif font-semibold px-5 text-4xl pt-8'>Diplay data</h1>
+    <div className='image'>
+        <div  style={{paddingLeft:"300px" }} >
+    <h1 className='font-serif font-semibold px-5 text-4xl pt-8'></h1>
 
 
     <table className='text-center font-medium bg-zinc-500  w-5/6 size-7 border-red-950 text-xl'   >
@@ -70,6 +71,7 @@ const Delete = () => {
       </tr>
       {ans}
     </table>
+    </div>
     </div>
     </>
   )

@@ -1,6 +1,7 @@
 
 import CartDashboard from './Bargrap';
 
+
 const Home=()=>{
   
     return(
@@ -11,6 +12,8 @@ const Home=()=>{
        
        <br />
        <CartDashboard/>
+  
+       
        
 
         </div>

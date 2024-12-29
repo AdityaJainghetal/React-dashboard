@@ -18,8 +18,8 @@ const dataSave = async(req, res)=>{
 
 const dataSearch =async(req, res)=>{
     const {name} =req.body;
-    const myData =await StuModel.find({name:name})
-    res.send(myData);
+    const mydata =await StuModel.find({name:name})
+    res.send(mydata);
 }
 
 

@@ -118,7 +118,13 @@ button:hover {
 
 
 
-
+.image{
+  background-image: url("https://png.pngtree.com/thumb_back/fw800/background/20240616/pngtree-young-man-pointing-to-graph-and-information-dashboard-image_15886711.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+}
 
 
 

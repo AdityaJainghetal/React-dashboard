@@ -4,20 +4,21 @@ import axios from "axios";
 import { message } from "antd";
 
 const Search=()=>{
-    const [year, setYear]=useState("");
+    const [nme, setNme]=useState("");
     const [mydata, setMydata]=useState([]);
     const handleSubmit=()=>{
         let api="http://localhost:8000/employer/datadisplay";
         // let api= "http://localhost:8080/students/datadisplay"
-        axios.get(api).then((res)=>{
+        axios.get(api, {name:nme}).then((res)=>{
             setMydata(res.data);
+            console.log(res.data);
 
             if(res.data.length<=0){
                 errMsg= message.error("No book for this year")
             }
-            else{
-                errMsg="";
-            }
+            // else{
+            //     errMsg="";
+            // }
         })
     }
     const ans=mydata.map((key)=>{
@@ -37,7 +38,7 @@ const Search=()=>{
         <div >
     
         <div className='text-center bg-slate-500 w-4/10 text-xl font-semibold mt-5'  >
-        Enter Publish Year : <input type="text" value={year} onChange={(e)=>{setYear(e.target.value)}} />
+        Enter your year : <input type="text" className="text-center" value={nme} onChange={(e)=>{setNme(e.target.value)}} />
         <button onClick={handleSubmit} style={{border:"2px solid black", borderRadius:"5px", backgroundColor:"whitesmoke"}}>Search</button>
         </div>
 
@@ -53,7 +54,8 @@ const Search=()=>{
       
     
        
-      {ans}
+      {/* {ans} */}
+      {mydata.length>=1 ? ans: <h3>No found data</h3>}
   
     </Table>
     </div>
