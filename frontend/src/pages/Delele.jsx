@@ -43,7 +43,7 @@ const Delete = () => {
         <td>{key.author_name}</td>
         <td>{key.publish_year}</td>
         <td>
-          <a href="" onClick={()=>{myDel(key._id)}}>
+          <a href="" style={{textAlign:"center"}} onClick={()=>{myDel(key._id)}}>
         <MdDelete/>
         </a>
         </td>

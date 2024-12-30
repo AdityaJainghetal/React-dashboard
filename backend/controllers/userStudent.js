@@ -18,7 +18,7 @@ const dataSave = async(req, res)=>{
 
 const dataSearch =async(req, res)=>{
     const {name} =req.body;
-    const mydata =await StuModel.find({name:name})
+    const mydata = await StuModel.find({ name: new RegExp(name, 'i') });
     res.send(mydata);
 }
 
