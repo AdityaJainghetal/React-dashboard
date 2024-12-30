@@ -36,6 +36,7 @@ const Display = () => {
 
   return(
     <>
+    <div className='image'>
         <div  style={{paddingLeft:"300px", width:"100%"}}>
     <h1 className='font-serif font-semibold text-4xl pt-8 '></h1>
 
@@ -49,6 +50,7 @@ const Display = () => {
       </tr>
       {ans}
     </table>
+    </div>
     </div>
     </>
   )

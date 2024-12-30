@@ -43,6 +43,7 @@ const Update = () => {
   ));
 
   return (
+    <div className='image'>
     <div style={{ paddingLeft: "300px", width: "100%" }}>
       <h1 className='font-serif font-semibold text-4xl pt-8'>Update Books</h1>
       <table className='text-center font-medium bg-zinc-500 w-5/6 size-7 border-red-950 text-xl'>
@@ -59,6 +60,7 @@ const Update = () => {
           {ans}
         </tbody>
       </table>
+    </div>
     </div>
   );
 };

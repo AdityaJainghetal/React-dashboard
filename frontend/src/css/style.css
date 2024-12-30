@@ -119,7 +119,9 @@ button:hover {
 
 
 .image{
-  background-image: url("https://png.pngtree.com/thumb_back/fw800/background/20240616/pngtree-young-man-pointing-to-graph-and-information-dashboard-image_15886711.jpg");
+  /* background-image: url("https://png.pngtree.com/thumb_back/fw800/background/20240616/pngtree-young-man-pointing-to-graph-and-information-dashboard-image_15886711.jpg"); */
+ /* background-image:url("https://wallup.net/wp-content/uploads/2018/09/25/598160-pier-water-blue-sky-bench-748x483.jpg") ; */
+  background-image: url("https://burst.shopifycdn.com/photos/fog-on-dark-waters-edge.jpg?width=1000&format=pjpg&exif=0&iptc=0");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;

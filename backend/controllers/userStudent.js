@@ -32,7 +32,7 @@ const deleteDataDisplay=async(req, res)=>{
 
 const recordDelete=async(req, res)=>{
  const {myid} = req.body;
- const myRes=await    StuModel.findByIdAndDelete(myid);
+ const myRes= await StuModel.findByIdAndDelete(myid);
  res.send(myRes);
 }
 

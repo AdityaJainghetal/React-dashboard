@@ -5,7 +5,7 @@ const CartDashboard = () => {
     { id: 1, name: "Product A", price: 20, quantity: 1 },
     { id: 2, name: "Product B", price: 40, quantity: 2 },
     { id: 3, name: "Product C", price: 30, quantity: 1 },
-    { id: 3, name: "Product C", price: 30, quantity: 1 },
+    { id: 4, name: "Product D", price: 30, quantity: 1 },
     
     
 
@@ -34,12 +34,12 @@ const CartDashboard = () => {
       {/* <h1>Shopping Cart</h1> */}
       <table className="cart-table">
         <thead>
-          <tr>
-            <th>Product</th>
-            <th>Price</th>
-            <th>Quantity</th>
-            <th>Total</th>
-            <th>Actions</th>
+          <tr >
+            <th style={{backgroundColor:"skyblue"}}>Product</th>
+            <th style={{backgroundColor:"skyblue"}}>Price</th>
+            <th style={{backgroundColor:"skyblue"}}>Quantity</th>
+            <th style={{backgroundColor:"skyblue"}}>Total</th>
+            <th style={{backgroundColor:"skyblue"}}>Actions</th>
           </tr>
         </thead>
         <tbody>

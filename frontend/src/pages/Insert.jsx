@@ -3,7 +3,6 @@ import { useState } from 'react';
 import axios from 'axios';
 import { message } from 'antd';
 import { useNavigate } from 'react-router-dom';
-// import Display from './Display';
 
 
 
@@ -37,6 +36,7 @@ const Insert = () => {
   
   return (
     <>
+     <div className='image'>
     <div style={{display:"flex", justifyContent:"center", alignItems:"center",paddingLeft:"100px", paddingTop:"50px"}} >
    
   
@@ -82,6 +82,7 @@ const Insert = () => {
    
    
 
+    </div>
     </div>
     </>
   )

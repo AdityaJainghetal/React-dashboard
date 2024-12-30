@@ -1,8 +1,6 @@
 const  UserModel= require("../models/userModel");
 
 
-
-
 const userSave=async(req, res)=>{
     const {name, mobile, email, password}= req.body;
     
@@ -18,7 +16,7 @@ const userSave=async(req, res)=>{
     res.send({msg:"Succesfully Registered!!!"});
 }
 const userCheck=async(req, res)=>{
- const {email, password}= req.body; 
+  const {email, password}= req.body; 
   const User= await UserModel.find({email});
   console.log(User);
     if (User.length>=1)
